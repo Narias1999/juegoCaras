@@ -1,0 +1,104 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background:#2c3e50;
+	color:#ecf0f1;
+	font-family: 'Arial';
+	font-size: 1.5em;
+}
+.game{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transition: .4s;
+}
+.end{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	transition: .4s;
+	transform:scale(0);
+}
+.end div{
+	display: flex;
+	justify-content: space-between;
+	width: 40vw;
+	margin: 60px 0;
+}
+.end div p{
+	display: flex;
+	flex-direction: column;
+}
+.end span{
+	margin-top: 15px;
+}
+.btn{
+	font-size: 20px;
+	padding: 10px 20px;
+	background: #27ae60;
+	border-radius: 2px;
+	text-decoration: none;
+	transition: .3s;
+	color: #ecf0f1;
+}
+.btn:hover{
+	background: #27AE30;
+}
+.points{
+	position: absolute;
+	top: 40vh;
+	width: 29vw;
+	text-align: center;
+}
+.container{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 30px;
+	margin: 0 auto;
+	max-width: 700px;
+	flex-wrap: wrap;
+}
+.card{
+	transition: .3s;
+	margin: 15px;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+}
+.card .crt{
+	position: relative;
+	width: 110px;
+	height: 160px;
+	transform-origin: 100% 50%;
+	transform-style: preserve-3d;
+	transform: perspective(200px);
+	transition: .4s;
+}
+.active{
+	transform: rotateY(180deg) translateX(100%) !important;
+}
+.front,.back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.front{
+	background: url(img/back.png);
+	background-size: 100%;
+}
+.back{
+	transform: rotateY(180deg);
+	background: #fff ;
+	background-position: center !important;
+	background-size: 100px !important;
+	background-repeat: no-repeat !important;
+}
